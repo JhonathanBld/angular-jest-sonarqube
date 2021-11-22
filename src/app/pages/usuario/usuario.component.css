@@ -1,0 +1,12 @@
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.card-usuario {
+  width: 65%;
+  margin: 65px auto auto auto;
+}
+
+.card-usuario mat-form-field {
+  width: 100%!important;
+}

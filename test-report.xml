@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\jhona\Documents\www\Facul\Implementação SonarQube\src\app\shared\layout\menu\menu.component.spec.ts">
+    <testCase name="MenuComponent Iniciar component" duration="3"/>
+  </file>
+  <file path="C:\Users\jhona\Documents\www\Facul\Implementação SonarQube\src\app\core\services\user.service.spec.ts">
+    <testCase name="UsuarioService Iniciar service" duration="3"/>
+    <testCase name="UsuarioService Buscar todos os usuarios" duration="2"/>
+    <testCase name="UsuarioService Salvar usuario" duration="1"/>
+    <testCase name="UsuarioService Salvar usuario" duration="1"/>
+  </file>
+  <file path="C:\Users\jhona\Documents\www\Facul\Implementação SonarQube\src\app\shared\layout\sidenav-menu\sidenav-menu.component.spec.ts">
+    <testCase name="SidenavMenuComponent Iniciar component" duration="3"/>
+  </file>
+  <file path="C:\Users\jhona\Documents\www\Facul\Implementação SonarQube\src\app\pages\listagem-usuarios\listagem-usuarios.component.spec.ts">
+    <testCase name="ListagemUsuarioComponent Testando as dependencias do componente Iniciar component" duration="8"/>
+    <testCase name="ListagemUsuarioComponent Testando as dependencias do componente Ativar spinner" duration="1"/>
+    <testCase name="ListagemUsuarioComponent Testando as dependencias do componente Desativar spinner" duration="1"/>
+    <testCase name="ListagemUsuarioComponent Testando as dependencias do componente Depois de iniciar o component" duration="1"/>
+    <testCase name="ListagemUsuarioComponent Testando as chamadas para services Verifica a chamada de buscar os usuarios" duration="1"/>
+    <testCase name="ListagemUsuarioComponent Testando as chamadas para services Editar Usuário" duration="1"/>
+    <testCase name="ListagemUsuarioComponent Pegar os usuários" duration="0"/>
+    <testCase name="ListagemUsuarioComponent Testar Paginação" duration="0"/>
+  </file>
+  <file path="C:\Users\jhona\Documents\www\Facul\Implementação SonarQube\src\app\pages\usuario\usuario.component.spec.ts">
+    <testCase name="UsuarioComponent Iniciar component" duration="5"/>
+    <testCase name="UsuarioComponent Cadastros Teste cadastro usuario valido" duration="2"/>
+    <testCase name="UsuarioComponent Cadastros Teste cadastro usuario com nome vazio" duration="1"/>
+    <testCase name="UsuarioComponent Cadastros Teste cadastro usuario com email vazio" duration="0"/>
+    <testCase name="UsuarioComponent Cadastros Teste cadastro usuario com email invalido" duration="1"/>
+    <testCase name="UsuarioComponent Teste para retornar mensagem de erro do email vazio" duration="1"/>
+    <testCase name="UsuarioComponent ngOnDestroy" duration="0"/>
+  </file>
+</testExecutions>
