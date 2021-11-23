@@ -1,3 +1,23 @@
-<p>
-  dashboard works!
-</p>
+<div class="container" fxLayout="row" fxLayoutGap="20px">
+
+  <mat-card fxFlex="50" fxLayoutAlign="start center">
+    <div fxLayout="row grid">
+      <div fxFlex="100" fxLayoutAlign="start center">
+        <mat-icon> person_outline </mat-icon>
+        <span>Total de usuários cadastrados: <strong>{{totalUsuarios}}</strong> </span>    
+      </div>      
+      <a style="margin-top: 24px;" mat-button color="primary" routerLink="/listagem-usuarios"> Ver todos os usuários </a>
+    </div>
+  </mat-card>
+
+   <mat-card fxFlex="50" fxLayoutAlign="start center">
+    <div fxLayout="row grid">
+      <div fxFlex="100" fxLayoutAlign="start center">
+        <mat-icon> person_outline </mat-icon>
+        <span>Total de usuários cadastrados: <strong>{{totalUsuarios}}</strong> </span>    
+      </div>         
+      <a style="margin-top: 24px;" mat-button color="primary" routerLink="/listagem-usuarios"> Ver todos os usuários </a>
+    </div>
+  </mat-card>
+  
+</div>

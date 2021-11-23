@@ -8,7 +8,6 @@ describe('ListagemUsuarioComponent', () => {
   let spinnerServiceMock: any;
   let usuarioserviceMock: any;
   let routerMock: any;
-  let fixture:any;
 
   beforeEach(async () => {
     // spinner
@@ -55,8 +54,7 @@ describe('ListagemUsuarioComponent', () => {
 
     it("Verifica a chamada de buscar os usuarios", (() => {
       const pegarUsuariosSpy =  jest.spyOn(component, 'buscarUsuarios');
-      component.buscarUsuarios();
-      
+      component.buscarUsuarios();      
       expect(pegarUsuariosSpy).toBeTruthy();
     }));
 
@@ -90,6 +88,5 @@ describe('ListagemUsuarioComponent', () => {
     }
     expect(component).toBeTruthy();
   });
-
 
 });

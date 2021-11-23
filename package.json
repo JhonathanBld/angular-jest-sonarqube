@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --coverage",
+    "test": "npx jest --coverage",
     "sonar": "sonar-scanner"
   },
   "private": true,
@@ -33,6 +33,7 @@
     "@angular-devkit/build-angular": "~12.2.7",
     "@angular/cli": "~12.2.7",
     "@angular/compiler-cli": "~12.2.0",
+    "@angular/flex-layout": "^12.0.0-beta.35",
     "@types/jasmine": "~3.8.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^12.11.1",
