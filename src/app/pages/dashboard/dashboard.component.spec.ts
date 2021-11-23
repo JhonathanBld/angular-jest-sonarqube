@@ -4,14 +4,20 @@ import { DashboardComponent } from "./dashboard.component";
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
-  let usuarioserviceMock: any;
+  let usuarioServiceMock: any;
+  let grupoServiceMock: any;
 
   beforeEach(async () => {
-    usuarioserviceMock = {      
+    usuarioServiceMock = {      
       buscarUsuarios: jest.fn().mockReturnValue(of([]))
     };
+
+    grupoServiceMock = {      
+      buscarGrupos: jest.fn().mockReturnValue(of([]))
+    };
     
-    component = new DashboardComponent(usuarioserviceMock);
+    
+    component = new DashboardComponent(usuarioServiceMock, grupoServiceMock);
   });
 
   it('Iniciar component', () => {
@@ -25,12 +31,18 @@ describe('DashboardComponent', () => {
   });
   
 
-  describe('Buscar usuarios', () => {
+  describe('Bsucar informações da tela', () => {
 
     it('Pegar os usuários', () => {
       const pegarUsuariosSpy = jest.spyOn(component, 'buscarUsuarios');
       component.buscarUsuarios();
       expect(pegarUsuariosSpy).toBeTruthy();
+    });
+
+    it('Pegar os grupos', () => {
+      const pegarGruposSpy = jest.spyOn(component, 'buscarGrupos');
+      component.buscarGrupos();
+      expect(pegarGruposSpy).toBeTruthy();
     });
 
     

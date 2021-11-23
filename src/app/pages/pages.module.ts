@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { UsuarioModule} from "./usuario/usuario.module";
-import { ListagemUsuarioModule } from './listagem-usuarios/listagem-usuarios.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AngularMaterialModule } from '../core/angular-material.module';
+import { GrupoModule } from './grupo/grupo.module';
+import { ListagemUsuarioModule } from './usuario/listagem-usuarios/listagem-usuarios.module';
 
 const Modules: any = [
   ListagemUsuarioModule,
-  UsuarioModule,
   DashboardModule,
+  GrupoModule,
   AngularMaterialModule
 ]
 

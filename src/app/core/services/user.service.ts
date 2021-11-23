@@ -1,6 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import { Observable, of } from 'rxjs';
-import Mock from '../../../../mock/user.json';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { UserModel } from '../models/user.model';
 
 @Injectable({
@@ -8,38 +9,11 @@ import { UserModel } from '../models/user.model';
 })
 export class UsuarioService {  
 
+  constructor(private http: HttpClient) {}
+
   buscarUsuarios() :Observable<UserModel[]> {
-    let usuarios = Mock.users;
-    let usuariosSalvos: Array<UserModel> = [];
-    usuariosSalvos = JSON.parse(<string>localStorage.getItem('usuariosSalvos'));
-    if (usuariosSalvos && usuariosSalvos.length) {
-      usuariosSalvos.forEach((row: any) => usuarios.push(row));
-    }
-    return of(usuarios);
+    return this.http.get<UserModel[]>(environment.mockApi + '/users.json');
   }
 
-  
-  salvarUsuario(usuario: UserModel) :Observable<boolean> {
-    let usuarios = [];
-    let usuariosSalvos = JSON.parse(<string>localStorage.getItem('usuariosSalvos'));
-    usuarios = usuariosSalvos && usuariosSalvos.length ? usuariosSalvos : [];
-    usuarios.push(usuario)
-    localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));
-    return of(true);
-  }
 
-  save(data: any): Promise<any> {
-    return new Promise<any>((resolve, reject) => {
-      try {
-        let usuarios = [];
-        let usuariosSalvos = JSON.parse(<string>localStorage.getItem('usuariosSalvos'));
-        usuarios = usuariosSalvos && usuariosSalvos.length ? usuariosSalvos : [];
-        usuarios.push(data)
-        localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));
-        resolve(true);
-      } catch (e) {
-        reject(e)
-      }
-    })
-  }
 }

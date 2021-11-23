@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ListagemUsuarioComponent } from './pages/listagem-usuarios/listagem-usuarios.component';
-import {UsuarioComponent} from "./pages/usuario/usuario.component";
+import { ListagemGrupoComponent } from './pages/grupo/listagem-grupo/listagem-grupo.component';
+import { ListagemUsuarioComponent } from './pages/usuario/listagem-usuarios/listagem-usuarios.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'listagem-usuarios', component: ListagemUsuarioComponent },
-  { path: 'usuario', component: UsuarioComponent },
-  { path: 'usuario/:id', component: UsuarioComponent }
+  { path: 'usuarios', component: ListagemUsuarioComponent },
+  { path: 'grupos', component: ListagemGrupoComponent },
 ];
 
 @NgModule({

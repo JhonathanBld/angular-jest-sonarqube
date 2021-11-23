@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "nome": "Grupo 1",
+    "descricao": "Grupo responsavel por X"
+  },
+  {
+    "id": 2,
+    "nome": "Grupo 2",
+    "descricao": "Grupo responsavel por Y"
+  }
+]

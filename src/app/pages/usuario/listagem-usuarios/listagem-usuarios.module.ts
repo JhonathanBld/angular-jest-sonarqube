@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { CommonModule } from '@angular/common';
-import { AngularMaterialModule } from '../../core/angular-material.module';
 import { ListagemUsuarioComponent } from './listagem-usuarios.component';
 import { UsuarioService } from 'src/app/core/services/user.service';
+import { AngularMaterialModule } from 'src/app/core/angular-material.module';
 
 @NgModule({
   declarations: [

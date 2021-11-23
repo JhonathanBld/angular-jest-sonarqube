@@ -14,7 +14,7 @@ import { UserModel } from 'src/app/core/models/user.model';
 })
 export class ListagemUsuarioComponent implements OnInit, AfterViewInit {
 
-  public displayedColumns: string[] = ['nome', 'email', 'ativo'];
+  public displayedColumns: string[] = ['nome', 'email', 'grupo' , 'ativo'];
   public dataSource: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator: any;
@@ -40,9 +40,7 @@ export class ListagemUsuarioComponent implements OnInit, AfterViewInit {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
       this.spinner.hide();
-    } , (error: any) => {
-      if (error) this.spinner.hide();      
-    })
+   })
   }
 
   editar(usuario: UserModel) {
