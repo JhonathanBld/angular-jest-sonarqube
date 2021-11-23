@@ -28,8 +28,8 @@ describe('UsuarioService', () => {
     expect(service).toBeTruthy();
   });
 
-  describe('#getUsers', () => {
-    it('should return an Observable<User[]>', () => {
+  describe('buscarUsuarios', () => {
+    it('Retorna a request fake de usuarios', () => {
   
       service.buscarUsuarios().subscribe(users => {
         expect(users.length).toBe(7);        
@@ -39,30 +39,4 @@ describe('UsuarioService', () => {
       expect(req.request.method).toBe("GET");
     });
   });
-
-  // it('Buscar todos os usuarios', () => {
-  //   const getSpy = jest.spyOn(service, 'buscarUsuarios');
-  //   service.buscarUsuarios();
-  //   expect(getSpy).toBeTruthy();
-  // });
-
-  // it('Salvar usuario', () => {
-  //   const saveSpy = jest.spyOn(service, 'save');
-  //   const data = { name: 'teste', email: 'teste@email.com' }
-  //   service.save(data);
-  //   expect(saveSpy).toBeTruthy();
-  // });
-
-
-  // it('Salvar usuario', () => {
-  //   const saveSpy = jest.spyOn(service, 'salvarUsuario');
-  //   const usuario: any = {      
-  //     "name": "Usuario Teste",
-  //     "email": "usuarioteste@email.com",
-  //     "active": true
-  //   };
-  //   service.salvarUsuario(usuario);
-  //   expect(saveSpy).toBeTruthy();
-  // });
-
 });
